@@ -29,7 +29,7 @@ def question():
 
 
 def repeat():
-        print("Would you like ask another question?")
+        print("Would you like ask another question? ('Yes' to go again)")
         answer = input().lower()
         if answer == "yes":
             question()
