@@ -14,3 +14,25 @@ Bonus - Using whatever module you like, add a gui. Your gui must have:
 
 7/6/2016
 """
+import time
+from random import randint
+
+replies = ["Yes", "No", "In the future", "Never", "Are you serious?"]
+
+
+def question():
+        question = input("What is your question?\n")
+        print("The answer fades into view...")
+        time.sleep(2)
+        print(replies[randint(0, 4)])
+        repeat()
+
+
+def repeat():
+        print("Would you like ask another question?")
+        answer = input().lower()
+        if answer == "yes":
+            question()
+
+print("You shake the magic 8 ball...")
+question()
